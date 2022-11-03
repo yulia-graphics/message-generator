@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  console.log('DOM fully loaded and parsed');
-
-// define types of words Create a branding for a industry in location, focusing on noun
-
-
-
 // A factory function that accepts different parameters to return a prompt for a brand
 const brandFactory = (brandName, adjectiveIndustry, industry, location, adjectiveBusinessPurpose, businessPurpose) => {
   return {
@@ -16,7 +9,7 @@ const brandFactory = (brandName, adjectiveIndustry, industry, location, adjectiv
     businessPurpose: businessPurpose,
 
     specialTask() {
-      // TO DO: randomize different taske
+      // TO DO: randomize different tasks
       console.log('Create a full branding suite');  
     }
   };
@@ -39,13 +32,3 @@ const scramble = () => {
 }
 
 const selectedBrand = scramble()
-
-// add selected text to front end
-const generator = document.getElementById('generator')
-console.log(generator)
-
-let brandPrompt = `Create a branding for a ${selectedBrand.adjectiveIndustry} ${selectedBrand.industry} named ${selectedBrand.name}, in ${selectedBrand.location}, focusing on ${selectedBrand.adjectiveBusinessPurpose} ${selectedBrand.businessPurpose}.`
-
-generator.innerHTML = brandPrompt
-
-});
